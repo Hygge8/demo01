@@ -1,0 +1,15 @@
+{
+  "name": "demo01 Olist data workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash scripts/setup.sh",
+  "postStartCommand": ".venv/bin/python scripts/validate_data.py --quick",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+      }
+    }
+  }
+}
